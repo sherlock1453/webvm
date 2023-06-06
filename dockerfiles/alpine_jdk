@@ -4,7 +4,7 @@ RUN apk update
 RUN apk add --no-cache bash
 RUN apk add vim
 
-RUN adduser -m user && echo "user:password" | chpasswd
+RUN adduser user && echo "user:password" | chpasswd
 COPY --chown=user:user ./examples /home/user/examples
 RUN chmod -R +x  /home/user/examples/lua
 # We set WORKDIR, as this gets extracted by Webvm to be used as the cwd. This is optional.
