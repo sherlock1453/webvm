@@ -1,5 +1,6 @@
 FROM --platform=i386 i386/alpine:3.18
 
+RUN apk update
 RUN apk add --no-cache bash
 RUN apk add openjdk11
 RUN apk add vim
