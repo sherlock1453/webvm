@@ -1,4 +1,4 @@
-FROM --platform=i386 openjdk:17-alpine3.14
+FROM --platform=i386 i386/openjdk:8-jdk-alpine
 
 RUN apk update
 RUN apk add --no-cache bash
