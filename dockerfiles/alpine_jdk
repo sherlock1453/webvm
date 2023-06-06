@@ -1,8 +1,7 @@
-FROM --platform=i386 i386/alpine:3.18
+FROM --platform=i386 openjdk:17-alpine3.14
 
 RUN apk update
 RUN apk add --no-cache bash
-RUN apk --no-cache add openjdk11 --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community
 RUN apk add vim
 
 RUN useradd -m user && echo "user:password" | chpasswd
